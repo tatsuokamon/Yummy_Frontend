@@ -1,14 +1,14 @@
 interface IDArg {
     kind: string;
-    videoId: string;
-    channelId: string;
-    playlistId: string;
+    videoId: string | undefined;
+    channelId: string | undefined;
+    playlistId: string | undefined;
 }
 declare class ID {
     kind: string;
-    videoId: string;
-    channelId: string;
-    playlistId: string;
+    videoId: string | undefined;
+    channelId: string | undefined;
+    playlistId: string | undefined;
     constructor(arg: IDArg);
 }
 export interface ItemArg {
@@ -29,8 +29,8 @@ interface SnippetArg {
     publishedAt: string;
     thumbnails: {
         default: ThumbnailArg;
-        high: ThumbnailArg;
-        medium: ThumbnailArg;
+        high: ThumbnailArg | undefined;
+        medium: ThumbnailArg | undefined;
     };
 }
 declare class Snippet {
@@ -42,8 +42,8 @@ declare class Snippet {
     publishedAt: string;
     thumbnails: {
         default: Thumbnail;
-        high: Thumbnail;
-        medium: Thumbnail;
+        high: Thumbnail | undefined;
+        medium: Thumbnail | undefined;
     };
     constructor(arg: SnippetArg);
 }

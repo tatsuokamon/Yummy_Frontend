@@ -22,8 +22,12 @@ class Snippet {
         this.publishedAt = arg.publishedAt;
         this.thumbnails = {
             default: new Thumbnail(arg.thumbnails.default),
-            high: new Thumbnail(arg.thumbnails.high),
-            medium: new Thumbnail(arg.thumbnails.medium),
+            high: arg.thumbnails.high
+                ? new Thumbnail(arg.thumbnails.high)
+                : undefined,
+            medium: arg.thumbnails.medium
+                ? new Thumbnail(arg.thumbnails.medium)
+                : undefined,
         };
     }
 }

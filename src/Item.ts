@@ -1,15 +1,15 @@
 interface IDArg {
 	kind: string;
-	videoId: string;
-	channelId: string;
-	playlistId: string;
+	videoId: string | undefined;
+	channelId: string | undefined;
+	playlistId: string | undefined;
 }
 
 class ID {
 	kind: string;
-	videoId: string;
-	channelId: string;
-	playlistId: string;
+	videoId: string | undefined;
+	channelId: string | undefined;
+	playlistId: string | undefined;
 
 	constructor(arg: IDArg) {
 		this.kind = arg.kind;
@@ -42,8 +42,8 @@ interface SnippetArg {
 	publishedAt: string;
 	thumbnails: {
 		default: ThumbnailArg;
-		high: ThumbnailArg;
-		medium: ThumbnailArg;
+		high: ThumbnailArg | undefined;
+		medium: ThumbnailArg | undefined;
 	};
 }
 
@@ -56,8 +56,8 @@ class Snippet {
 	publishedAt: string;
 	thumbnails: {
 		default: Thumbnail;
-		high: Thumbnail;
-		medium: Thumbnail;
+		high: Thumbnail | undefined;
+		medium: Thumbnail | undefined;
 	};
 	constructor(arg: SnippetArg) {
 		this.channelId = arg.channelId;
@@ -68,8 +68,12 @@ class Snippet {
 		this.publishedAt = arg.publishedAt;
 		this.thumbnails = {
 			default: new Thumbnail(arg.thumbnails.default),
-			high: new Thumbnail(arg.thumbnails.high),
-			medium: new Thumbnail(arg.thumbnails.medium),
+			high: arg.thumbnails.high
+				? new Thumbnail(arg.thumbnails.high)
+				: undefined,
+			medium: arg.thumbnails.medium
+				? new Thumbnail(arg.thumbnails.medium)
+				: undefined,
 		};
 	}
 }
