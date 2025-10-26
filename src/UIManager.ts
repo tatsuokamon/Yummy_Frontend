@@ -1,5 +1,6 @@
-import { Item } from "./Item";
-export class UIManger {
+import type { Item } from "./Item";
+
+export class UIManager {
 	static renderItem(item: Item): HTMLElement {
 		const wrapper = document.createElement("div");
 

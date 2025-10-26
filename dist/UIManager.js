@@ -1,4 +1,4 @@
-export class UIManger {
+export class UIManager {
     static renderItem(item) {
         const wrapper = document.createElement("div");
         const img = new Image();
@@ -10,4 +10,4 @@ export class UIManger {
         return wrapper;
     }
 }
-//# sourceMappingURL=UIManger.js.map
+//# sourceMappingURL=UIManager.js.map

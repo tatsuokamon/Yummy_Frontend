@@ -1,5 +1,5 @@
 import type { Item } from "./Item";
-export declare class UIManger {
+export declare class UIManager {
     static renderItem(item: Item): HTMLElement;
 }
-//# sourceMappingURL=UIManger.d.ts.map
+//# sourceMappingURL=UIManager.d.ts.map
