@@ -1,0 +1,1 @@
+{"version":3,"file":"MusicPlayer.d.ts","sourceRoot":"","sources":["../src/MusicPlayer.ts"],"names":[],"mappings":"AAAA,qBAAa,WAAW;IACvB,MAAM,EAAE,EAAE,CAAC,MAAM,GAAG,IAAI,CAAC;IACzB,KAAK,EAAE,OAAO,CAAC;;IAMf,IAAI,CAAC,eAAe,EAAE,CAAC,CAAC,EAAE,EAAE,CAAC,kBAAkB,KAAK,IAAI;CAqBxD"}
